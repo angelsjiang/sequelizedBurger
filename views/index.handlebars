@@ -1,0 +1,35 @@
+<img id="burger_icon" src="/assets/img/burger.jpg"/>
+<h1>Eat-Da-Burger!</h1>
+
+<table style = "width: 70%">
+    <tr>
+        <th><h2>Burgers you haven't eaten!</h2></th>
+        <th><h2>Burgers you ate!</h2></th>
+    </tr>
+
+    <tr>
+        <th>
+            {{#each burger}}
+                {{#unless devoured}}
+                    {{> burgers/burger_block devoured=true}}
+                {{/unless}}
+            {{/each}}
+        </th>
+        <th>
+            {{#each burger}}
+                {{#if devoured}}
+                    {{> burgers/burger_block devoured=false}}
+                {{/if}}
+            {{/each}}
+        </th>
+    </tr>
+</table>
+
+<br>
+
+<h3>Get another burger?</h3>
+<form class="create-form">
+    <textarea id="burger_name"></textarea>
+    <br>
+    <button class="btn btn-outline-info" type="submit">Get burger!</button>
+</form>
