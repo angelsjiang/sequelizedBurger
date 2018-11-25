@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+
+        <!-- {{!-- link to style sheet --}} -->
+		<link rel="stylesheet" href="/assets/css/burger_style.css" type="text/css" />
+
+        <!-- {{!-- link to jQuery --}} -->
+		<script src="https://code.jquery.com/jquery.js"></script>
+
+        <!-- {{!-- link to javascript file --}} -->
+		<script src="/assets/js/burger_logic.js"></script>
+
+        <title>Eat-Da-Burger!</title>
+
+	</head>
+
+	<body>
+		<img id="burger_icon" src="/assets/img/burger.jpg"/>
+        <h1>Eat-Da-Burger!</h1>
+
+        <table class="dataTable" style = "width: 70%">
+            <tr>
+                <th><h2>Burgers you haven't eaten!</h2></th>
+                <th><h2>Burgers you ate!</h2></th>
+            </tr>
+
+            <tr>
+                <th id="not-eaten">
+                    
+                </th>
+                <th id="eaten">
+                    
+                </th>
+            </tr>
+        </table>
+
+        <br>
+
+        <h3>Get another burger?</h3>
+        <form class="create-form">
+            <textarea id="burger_name"></textarea>
+            <br>
+            <button class="btn btn-outline-info" type="submit">Get burger!</button>
+        </form>
+	</body>
+    
+</html>
