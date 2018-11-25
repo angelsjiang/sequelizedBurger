@@ -63,7 +63,7 @@ $(document).ready(function() {
     };
 
     function getData() {
-        $.get("*", function(data) {
+        $.get("/api/burgers", function(data) {
             list = data;
             initializeData();
         });
