@@ -10,7 +10,7 @@ app.use(express.static("public"));
 
 require("./routes/burgers_controllers")(app);
 
-
+var PORT = process.env.PORT || 3000;
 db.sequelize.sync().then(function() {
     app.listen(PORT, function() {
         console.log("App listening on: http://localhost:" + PORT);
